@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" href="/static/restaurantstyle.css">
+
+<h1> Ann Arbor Restaurants </h1>
+<ul>
+  <li><a href='/'> Home Page </a></li>
+  <li><a href='/events'> Check out University of Michigan Events </a></li>
+  <li><a href = '/yelp'> Go to Yelp Pages </a></li>
+</ul>
+
+<form action="/restaurants" method="POST">
+    Sort By:<br/>
+    <input type="radio" name="sortby" value="price"/> Price <br/>
+    <input type="radio" name="sortby" value="rating"/> Rating <br/>
+    <br/>
+    Sort Order:<br/>
+    <input type="radio" name="sortorder" value="asc"/> Ascending <br/>
+    <input type="radio" name="sortorder" value="desc"/> Descending <br/>
+    <br/>
+    <input type="submit" name="update" value="Update"/>
+    <br/>
+    <br/>
+</form>
+
+<p> Price Levels are interpreted as follows: </p>
+<ul>
+    <li> 0 - Free </li>
+    <li> 1 - Inexpensive </li>
+    <li> 2 - Moderate </li>
+    <li> 3 - Expensive </li>
+    <li> 4 - Very Expensive </li>
+</ul>
+<table border=5>
+    <tr>
+        <th> Id </th>
+        <th>Restaurant</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Hours</th>
+        <th>Address</th>
+        <th>Phone</th>
+    </tr>
+
+{% for r in restaurants %}
+    <tr>
+        <td>{{r[0]}}</td>
+        <td>{{r[1]}}</td>
+        <td>{{r[2]}}</td>
+        <td>{{r[3]}}</td>
+        <td>{{r[5]}}</td>
+        <td>{{r[6]}}</td>
+        <td>{{r[7]}}</td>
+    </tr>
+{% endfor %}
+</table>

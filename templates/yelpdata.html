@@ -1,0 +1,40 @@
+
+<link rel="stylesheet" href="/static/yelp.css">
+
+<h1> Restaurants' Reviews and YELP Pages </h1>
+<ul>
+  <li><a href='/'> Home Page </a></li>
+  <li><a href='/events'> Check out University of Michigan Events </a></li>
+  <li><a href='/restaurants'> Explore Ann Arbor Restaurants </a></li>
+</ul>
+
+<form action="/yelp" method="POST">
+    Sort By:<br/>
+    <input type="radio" name="sortby" value="review_count"/> Reviews <br/>
+    <br/>
+    Sort Order:<br/>
+    <input type="radio" name="sortorder" value="asc"/> Ascending <br/>
+    <input type="radio" name="sortorder" value="desc"/> Descending <br/>
+    <br/>
+    <input type="submit" name="update" value="Update"/>
+    <br/>
+    <br/>
+</form>
+
+<p> To open the restaurant's Yelp page, copy and past the URL into your browser! </p>
+
+<table border=5>
+    <tr>
+        <th> Restaurant </th>
+        <th>Number of Reviews</th>
+        <th> Yelp Page </th>
+    </tr>
+
+{% for y in yelp %}
+    <tr>
+        <td>{{y[0]}}</td>
+        <td>{{y[1]}}</td>
+        <td>{{y[2]}}</td>
+    </tr>
+{% endfor %}
+</table>
