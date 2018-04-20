@@ -4,9 +4,9 @@ My program aims to provide the user a fun weekend in Ann Arbor. My program will 
 
 Please install all modules listed in requirements.txt to run the program successfully.
 The program has 3 main functions to get data:
-      *get_umich_events(): retrieves event data for the current day from the Happening @ Michigan page which is then saved as instances in the UmichEvents class.
-      *get_google_restaurants(): retrieves Ann Arbor restaurants from Google Places API which is saved in GoogleRestaurants class to be used to populate the Restaurants database.
-      *create_yelp_table(): creates relation between Restaurants table and RestaurantDetails table in database by populating data from Yelp API using the phone number of the restaurant from the Restaurants table.
+      1. get_umich_events(): retrieves event data for the current day from the Happening @ Michigan page which is then saved as instances in the UmichEvents class.
+      2. get_google_restaurants(): retrieves Ann Arbor restaurants from Google Places API which is saved in GoogleRestaurants class to be used to populate the Restaurants database.
+      3. create_yelp_table(): creates relation between Restaurants table and RestaurantDetails table in database by populating data from Yelp API using the phone number of the restaurant from the Restaurants table.
 
 Brief user guide, including how to run the program and how to choose presentation options.
 To run the program, simply run the file finalproject.py. When prompted with the question "Would you like the next Google results page? ", enter yes. (This is to not cause an error because Google delays the data collection by a couple seconds). You will see these lines:
