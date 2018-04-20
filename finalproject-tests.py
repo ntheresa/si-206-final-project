@@ -56,6 +56,11 @@ class TestTableJoins(unittest.TestCase):
         self.assertEqual(len(list_of_results), 7)
         conn.close()
 
+class TestAPIs(unittest.TestCase):
+    def testGoogleAPI(self):
+        googles = finalproject.get_google_restaurants()
+        self.assertTrue(len(googles) > 0)
+
 class TestClasses(unittest.TestCase):
     def testUmichConstructor(self):
         e1 = finalproject.UmichEvents()
