@@ -10,9 +10,9 @@ The program has 3 main functions to get data:
 
 Brief user guide, including how to run the program and how to choose presentation options.
 To run the program, simply run the file finalproject.py. When prompted with the question "Would you like the next Google results page? ", enter yes. (This is to not cause an error because Google delays the data collection by a couple seconds). You will see these lines:
-  *Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-  *Restarting with stat
-  *Debugger is active!
-  *Debugger PIN: 324-859-096
+  - Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+  - Restarting with stat
+  - Debugger is active!
+  - Debugger PIN: 324-859-096
 Copy the url(http://127.0.0.1:5000/) and paste it into your browser. You will be on the home page! From there, you can choose to explore events at Michigan, or see Ann Arbor Restaurants. On the Ann Arbor Restaurants page, you can choose to sort the restaurants by rating or price. If you want to read reviews about a restaurant, simply click on the link that says "Go To Yelp Pages." Find the name of the restaurant you want, and copy and paste the Yelp URL into your browser.
 Happy exploring!
